@@ -8,18 +8,18 @@ A collection of JavaScript coding challenges focused on **algorithms, data struc
 js-coding-challenges/
 │── README.md
 │
-│── Closures/  
+│── closures/  
 │  
-│── Basic Array Transformation/  
+│── basic-array-transformation/  
 │
-│── Function Transformation/
+│── function-transformation/
 │
-│── Promises and Time  
-│   ├── promise-and-time.js
+│── promises-and-time  
+│   ├── promiseTimeLimit.js
 │
 │── JSON  
 │   
-│── Classes  
+│── classes  
 │   
 
 ```
