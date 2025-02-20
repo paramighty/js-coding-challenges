@@ -11,7 +11,12 @@ The provided callback fn will accept an item in the array and return a string ke
 
 The order of each value list should be the order the items appear in the array. Any order of keys is acceptable.
 
-Please solve it without lodash's _.groupBy function.*/
+Please solve it without lodash's _.groupBy function.
+
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+
+*/
 
 Array.prototype.groupBy = function (fn) {
 	// Use reduce to iterate over the array and create the object
