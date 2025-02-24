@@ -54,3 +54,34 @@ var join = function (arr1, arr2) {
 
 	// let res =  a1.concat(a2).sort((a, b) => a - b);
 };
+
+/*Attempt - 2
+ *
+ * Time Complexity: O(N+M)
+ * Space Complexity:O(N+M)
+ */
+
+var join = function (arr1, arr2) {
+	// Create Map of arr2
+	let newArray = new Map();
+	arr2.forEach((item) => {
+		let id = Object.values(item)[0];
+		newArray.set(id, item);
+	});
+
+	//Processing the arr1
+
+	let result = arr1.map((item) => {
+		let id = Object.values(item)[0];
+
+		if (newArray.has(id)) {
+			Object.assign(item, newArray.get(id));
+			newArray.delete(id);
+		}
+		return item;
+	});
+
+	return result
+		.concat([...newArray.values()])
+		.sort((a, b) => Object.values(a)[0] - Object.values(b)[0]);
+};
